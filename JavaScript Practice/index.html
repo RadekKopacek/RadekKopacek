@@ -51,11 +51,49 @@
             }
         }
 
+        //using innerHTML to display output
+        //add event Listener
+        document.getElementById('profileBtn').addEventListener('click',displayProfile);
+        //now, create function
+        function displayProfile() {
+            let firstName = "Jane";
+            document.getElementById("box").innerHTML = "My name is " + firstName;
+            let age = 30;
+            document.querySelector("#box2").innerHTML = "I am " + age + " years old";
+        }
 
+        //usging an if statement and having the user add their own dynamic content
+        //get user input
+        let name = document.getElementById("user");
+        //add event listener
+        document.getElementById('userName').addEventListener('click', greeting);
+        //create greeting function
+        function greeting() {
+            if (name.value === "") {
+                alert("please fill out the empty field");
+            }
+            else {
+                document.getElementById("box3").innerHTML = "Hello " + name.value;
+            }
+        }
+
+        //user adds to an array list
+        //learn about array methods
+        //get user input
+        let item = document.getElementById("addList");
+        //add event listener
+        document.getElementById('add').addEventListener('click', addItem);
+        let groceryList = ["apples", "cheese", "milk", "eggs"];
+        let displayList = groceryLis.toString();
+        document.querySelector("box4").innerHTML = displayList;
+        //create function below
+        function addItem() {
+            let newItem = item.value;
+            groceryList.push(newItem);
+            let newList = groceryList.toString();
+            document.querySelector("#box4").innerHTML = newList;
+            item.value = "";
+           }
     </script>
-
-
-
-
 </body>
 </html>
