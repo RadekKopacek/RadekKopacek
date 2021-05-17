@@ -3,6 +3,41 @@
 <head>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 <title>Blue Developer Directory</title>
+<script type="text/javascript">
+	function initStorage(){
+		function saveName(){
+			var name = document.getElementById('name');
+			localStorage.setItem('name',name.value);
+			
+		}
+	function saveEmail(){
+		var email = document.getElementById('email');
+		localStorage.setItem('email',email.value);
+		}
+	saveName();
+	saveEmail();
+	}
+
+	function displayName(){
+		if(localStorage.getItem('name') != null){
+			document.write('Welcome Back, ' + localStorage.getItem('name'));
+		}
+	}
+
+	function showEmail(){
+		if(localStorage.getItem('email') == null){
+			document.write('<p>Please enter your email address</p>');
+		}else {
+			document.write('<p><strong>Subscribed email: </strong>' + localStorage.getItem('email') + '</p>');
+		}
+
+	}
+	
+	function clearAll(){
+		localStorage.clear();
+		window.location.reload();
+	}
+</script>
 </head>
 <body>
 	<div id="container">
@@ -19,6 +54,11 @@
 				<li class="menuitem"><a href="register.html">Register As Developer</a></li>
             	<li class="menuitem"><a href="contact.html">Contact Us</a></li>
         	</ul>
+			<div id='displayName'>
+				<script>
+					displayName();
+				</script>
+			</div>
 		</div> <!--menu end-->
 
 		<div id="leftmenu">
@@ -34,6 +74,20 @@
 				<li><a href="browse.html">Internet Marketing</a></li>
 				<li><a href="browse.html">XHTML Templates</a></li>
 			</ul>
+			<br><br>
+			<div id="asideinput">
+				<h3>Newsletter</h3>
+				<script>
+					showEmail();
+				</script>
+				<form id="news" onsubmit="initStorage()">
+					Name: <br><input type="text" id="name" name="name">
+					<br>
+					Email: <br><input type="email" id="email" name="email">
+					<input type="submit" value="Send">
+					<a href="#" onclick="clearAll()">Clear</a>
+				</form>
+			</div>
     	</div> <!--left menu end-->
 
 		<div id="content">
