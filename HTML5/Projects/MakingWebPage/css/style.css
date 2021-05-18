@@ -215,3 +215,13 @@ table.dev-table tr, table.dev-table td {
 #asideinput {
     margin-bottom: 10px;
 }
+
+footer{
+	width:100%;
+	background:#000;
+	color:#fff;
+	height:30px;
+	text-align:center;
+	margin-top:20px;
+	padding-top:15px;
+}
