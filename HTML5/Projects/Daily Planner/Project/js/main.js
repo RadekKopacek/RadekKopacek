@@ -9,6 +9,17 @@ $(document).ready(function(){
         updateTask(e);
     });
 
+    // Remove task event
+    $('#task-table').on('click','#remove-task',function(){
+        id = $(this).data('id');
+        removeTask(id);
+    });
+
+    // Clear tasks event
+    $('#clear-tasks').on('click', function(){
+        clearAllTasks();
+    });
+
     displayTasks();
 
     // Function to display tasks
@@ -31,7 +42,7 @@ $(document).ready(function(){
                 '<td>' + value.task_date + '</td>' +
                 '<td>' + value.task_date + '</td>' +
                 '<td>' + value.task_time + '</td>' +
-                '<td><a href="edit.html?id='+ value.id + '">Edit</a> | <a href="#" id="remove-task">Remove</a></td>' +
+                '<td><a href="edit.html?id='+ value.id + '">Edit</a> | <a href="#" id="remove-task" data-id="'+ value.id +'">Remove</a></td>' +
                 '</tr>'); 
             })
         }
@@ -146,10 +157,30 @@ $(document).ready(function(){
 
             tasks.push(new_task);
             localStorage.setItem('tasks', JSON.stringify(tasks));
-
-            console.log('Task added');
-
         }       
+    }
+    // Function to remove task
+    function removeTask(id){
+        if(confirm('Are you sure you want to delete this task?')){
+            var taskList = JSON.parse(localStorage.getItem('tasks'));
+
+            for(var i=0; i < taskList.length; i++){
+                if(taskList[i].id == id){
+                    taskList.splice(i,1)
+                }
+                localStorage.setItem('tasks', JSON.stringify(taskList));
+            }
+
+            location.reload();
+        }
+    }
+
+    // Function to clear all tasks
+    function clearAllTasks(){
+        if(confirm('Do you want to clear all taks?')){
+            localStorage.clear();
+            location.reload();
+        }
     }
 });
 
