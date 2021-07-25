@@ -76,13 +76,22 @@
             <input type="radio" name="size" id="m" value="m">
         </p>
         <p>
-            <label for="meal">Please Selet an Entree</label>
+            <label for="meal">Please Select an Entree</label>
             <select name="meal" id="meal">
                 <option value="fish">Fish</option>
                 <option value="veg">Vegetarian</option>
                 <option value="steak">Steak</option>
             </select>
         </p>
+        <p>
+            <label for="cheese">Amount of cheese:</label>
+            <input type="range" id="cheese" min="0" max="100" step="10" value="30" name="cheese_level">
+        </p>
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <textarea name="requests" id="requests" placeholder="Write something" cols="30" rows="10"></textarea>
+        </p>
+
         <button>submit</button>
     </form>
 </body>
