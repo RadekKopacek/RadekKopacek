@@ -26,11 +26,13 @@ span {
 .tag {
     background-color: #e63946;
     color: #f1faee;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .post a {
     color: burlywood;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 footer a {
@@ -39,9 +41,46 @@ footer a {
 
 h2 + button {
     background-color: orange;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 footer > a {
     color: grey;
+}
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+a[href*="google"] {
+    color: magenta;
+}
+
+.post button:hover {
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: #02c39a;
+}
+
+.post:nth-of-type(2) {
+    background-color: goldenrod;
+}
+
+h2::first-letter {
+    font-size: 50px;
+}
+
+p::first-line {
+    color: hotpink;
+}
+
+p::selection {
+    background-color: khaki;
 }
