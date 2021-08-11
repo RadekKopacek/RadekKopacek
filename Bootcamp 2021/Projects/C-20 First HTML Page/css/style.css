@@ -84,3 +84,7 @@ p::first-line {
 p::selection {
     background-color: khaki;
 }
+
+button:hover {
+    background-color: olive;
+    }
