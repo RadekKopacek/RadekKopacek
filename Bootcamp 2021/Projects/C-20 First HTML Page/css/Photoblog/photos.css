@@ -1,0 +1,15 @@
+img {
+    width: 30%;
+    height: 20em;
+    margin: calc(10%/6);
+}
+
+nav {
+    text-transform: uppercase;
+    color: #ebe6e6;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin-left: calc(10%/6);
+    padding: 1%;
+    font-size: 2em;
+}
