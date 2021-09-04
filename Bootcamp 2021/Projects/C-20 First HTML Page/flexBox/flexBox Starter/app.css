@@ -4,6 +4,9 @@ body {
 h1 {
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
 #container {
     background-color: #003049;
     width: 90%;
@@ -11,14 +14,15 @@ h1 {
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;    
     flex-wrap: wrap;
-}
+    }
 #container div {
     width: 200px;
     height: 200px;
+    text-align: center;
+    flex-basis: 400px;
 }
 
 div:nth-of-type(2){
@@ -26,4 +30,21 @@ div:nth-of-type(2){
 }
 div:nth-of-type(3){
     align-self: flex-end;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+main .sidebar {
+    background-color: #6930c3;
+    border: 2px solid white;
+    flex: 1 2 300px;
+}
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 1 800px;
 }
