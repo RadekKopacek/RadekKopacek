@@ -7,3 +7,7 @@ for (let i = 0; i < subreddits.length; i++) {
 for (let sub of subreddits) {
     console.log(sub);
 }
+
+for (let char of "hello world") {
+    console.log(char);
+}
