@@ -17,8 +17,14 @@
 //     console.log(link.href)
 // }
 
-// const allLinks = document.querySelectorAll('a');
+const allLinks = document.querySelectorAll('a');
 
 // for (let link of allLinks) {
 //     link.innerText = 'I AM A LINK!!!!'
 // }
+
+for (let link of allLinks) {
+    link.style.color = 'blue';
+    link.style.textDecorationColor = 'magenta';
+    link.style.textDecorationStyle = 'wavy';
+}
