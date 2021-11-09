@@ -10,16 +10,28 @@
 
 <body>
     <h2>PingPoing Score Keeper</h2>
-    <h1 id="score1">0</h1>
-    <h1>to</h1>
-    <h1 id="score2">0</h1>
+    <span id="score1" style="font-size: 50px; font-weight: bold;">0</span>
+    <span style="font-size: 50px;">-</span>
+    <span id="score2" style="font-size: 50px; font-weight: bold;">0</span>
     <p>Use the buttons bellow to keep score</p>
 
-    <h3>Playing To</h3>
-
-    <button id="button1">+1Player One</button>
-    <button id="button2">+1Player Two</button>
-    <button id="reset">Reset</button>
+    <span>Playing To:</span>
+    <select name="maxScore" id="maxScore">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <p>
+        <button id="button1">+1Player One</button>
+        <button id="button2">+1Player Two</button>
+        <button id="reset">Reset</button>
+    </p>
+    <script src="app.js"></script>
 </body>
 
 </html>
