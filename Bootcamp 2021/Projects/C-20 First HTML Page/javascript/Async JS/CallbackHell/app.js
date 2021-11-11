@@ -33,12 +33,12 @@ delayedColorChange('red', 1000, () => {
 });
 
 
-searchMoviesAPI('amadeus', () => {
-    saveToMyDB(movies, () => {
-        // if it works, run this:
-    }, () => {
-        // if it doesn't work, run this:
-    })
-}, () => {
-    // if API is down, or request failed
-})
+// searchMoviesAPI('amadeus', () => {
+//     saveToMyDB(movies, () => {
+//         // if it works, run this:
+//     }, () => {
+//         // if it doesn't work, run this:
+//     })
+// }, () => {
+//     // if API is down, or request failed
+// })
